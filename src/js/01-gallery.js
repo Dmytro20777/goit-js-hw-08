@@ -36,11 +36,10 @@ function handleClick(event) {
   if (target.classList.contains('gallery__image')) {
     const index = galleryItems.findIndex(item => item.original === target.dataset.source);
 
-    instance = new SimpleLightbox(galleryItems, {
-      index,
-      captionsData: 'alt',
-      captionDelay: 250,
-    });
+ instance = new SimpleLightbox('.gallery', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
     instance.show();
 
