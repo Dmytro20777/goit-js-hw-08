@@ -29,6 +29,8 @@ function createListGallery(array) {
 
 listGallery.insertAdjacentHTML('beforeend', createListGallery(galleryItems));
 
+listGallery.addEventListener('click', handleClick);
+
 function handleClick(event) {
   event.preventDefault();
 
@@ -46,7 +48,7 @@ function handleClick(event) {
 }
 
 
-listGallery.addEventListener('click', handleClick);
+
 
 
 
