@@ -30,7 +30,7 @@ function createListGallery(array) {
 listGallery.insertAdjacentHTML('beforeend', createListGallery(galleryItems));
 
 
- instance = new SimpleLightbox('.gallery__item a ', {
+const instance = new SimpleLightbox('.gallery__item a ', {
   captionsData: 'alt',
   captionDelay: 250,
 });
