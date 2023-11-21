@@ -29,23 +29,12 @@ function createListGallery(array) {
 
 listGallery.insertAdjacentHTML('beforeend', createListGallery(galleryItems));
 
-listGallery.addEventListener('click', handleClick);
 
-function handleClick(event) {
-  event.preventDefault();
-
-  const target = event.target;
-  if (target.classList.contains('gallery__image')) {
-    const index = galleryItems.findIndex(item => item.original === target.dataset.source);
-
- instance = new SimpleLightbox('.gallery a', {
+ instance = new SimpleLightbox('.gallery__item a ', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-    instance.show();
-  }
-}
 
 
 
